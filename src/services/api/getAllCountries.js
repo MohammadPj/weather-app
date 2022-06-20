@@ -7,10 +7,8 @@ const getAllCountries = () => {
  return axios.get(url)
 };
 
-const AllCountriesUseQuery = (enabled = true) => {
- return useQuery('countries', getAllCountries, {
-  enabled,
- });
+const AllCountriesUseQuery = () => {
+ return useQuery('countries', getAllCountries);
 };
 
 export default AllCountriesUseQuery
